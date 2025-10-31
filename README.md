@@ -1,35 +1,53 @@
-# DarkUser Premium Suite v2
+<h1 align="center">
+  <img src="https://github.com/karisnacell69/darkuser-premium-v2/raw/main/darkuser-banner-animated.svg" width="600px"><br>
+  💎 DarkUser Premium Suite v2 💎
+</h1>
 
-## What it includes
-- `install-darkuser-premium.sh` - full installer (SSH, Dropbear, Stunnel, Nginx, Certbot, BadVPN)
-- `telegram-ssh-panel.py` - Telegram admin bot to manage SSH/UDP users
-- `darkuser-bot.service` - systemd unit for the bot
-- `update-darkuser.sh` - optional auto-update script (pull from your GitHub)
-- `payloads.txt` - example payloads for WS/WSS/UDP
+<p align="center">
+  <b>Auto Installer All-in-One • SSH • SSL • WebSocket • UDP • Telegram Panel</b><br>
+  Powered by <a href="https://github.com/karisnacell69" target="_blank">DarkUser Tech</a>
+</p>
 
-## Quick install
-1. Upload the package to your VPS and extract.
-2. Edit `install-darkuser-premium.sh`, set DOMAIN and EMAIL, then run:
-   ```
-   sudo bash install-darkuser-premium.sh
-   ```
-3. Put `telegram-ssh-panel.py` to `/usr/local/bin/telegram-ssh-panel.py` and make executable:
-   ```
-   sudo cp telegram-ssh-panel.py /usr/local/bin/telegram-ssh-panel.py
-   sudo chmod +x /usr/local/bin/telegram-ssh-panel.py
-   ```
-4. Edit `darkuser-bot.service` to set your `DARKUSER_BOT_TOKEN` and `DARKUSER_ADMIN_ID`, then install:
-   ```
-   sudo cp darkuser-bot.service /etc/systemd/system/darkuser-bot.service
-   sudo systemctl daemon-reload
-   sudo systemctl enable --now darkuser-bot.service
-   ```
-5. Configure firewall and ensure domain DNS points to server if using certbot.
+---
 
-## Security notes
-- The bot must run as root to manage system users. Keep the bot token & admin id secret.
-- Test on a non-production VPS first.
-- Back up `/etc/darkuser_bot/users.csv` regularly.
+## ⚡ Tentang DarkUser Premium v2
 
-## License & attribution
-For your personal/professional use. Attribution to 'DarkUser' and GitHub: https://github.com/karisnacell69
+**DarkUser Premium Suite v2** adalah installer otomatis kelas premium  
+yang mengintegrasikan layanan **SSH, SSL, WebSocket, UDPGW, dan Telegram Panel**  
+dalam satu paket profesional dengan tampilan khas *DarkUser*.
+
+---
+
+## 💜 Fitur Utama
+
+✅ **Auto Install Lengkap** — SSH, Dropbear, SSL (stunnel), WebSocket (Nginx), BadVPN UDPGW  
+✅ **Auto Domain + SSL (Let's Encrypt)** — Integrasi penuh dengan Certbot  
+✅ **Multi-Port Aktif** — 22, 80, 443, 109, 143, 7100–7300  
+✅ **Telegram Panel Bot** — Buat, perpanjang, kunci, hapus akun SSH via Telegram  
+✅ **Auto Expire & Cronjob Harian** — Penghapusan otomatis akun kadaluarsa  
+✅ **Auto Update & Auto Fix Service** — Semua error otomatis diperbaiki & dicatat  
+✅ **Dark Theme UI + Neon Banner** — Tampilan animasi khas DarkUser  
+✅ **Keamanan Premium** — Password terenkripsi & sistem lock/unlock user  
+
+---
+
+## 🧩 Komponen yang Terinstal
+
+| Komponen | Fungsi |
+|-----------|---------|
+| **OpenSSH** | Server SSH utama |
+| **Dropbear** | Lightweight SSH alternative |
+| **Stunnel4 + Certbot** | SSL/TLS Encryption |
+| **Nginx WebSocket Proxy** | SSH WebSocket & WSS |
+| **BadVPN UDPGW** | Support UDP untuk gaming & VoIP |
+| **Telegram SSH Panel** | Bot Telegram untuk kontrol akun |
+| **Cronjob + Systemd** | Otomasi update & manajemen service |
+
+---
+
+## ⚙️ Instalasi Cepat
+
+```bash
+wget https://github.com/karisnacell69/darkuser-premium-v2/raw/main/install-darkuser-premium.sh
+chmod +x install-darkuser-premium.sh
+sudo bash install-darkuser-premium.sh
