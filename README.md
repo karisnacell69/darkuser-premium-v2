@@ -8,6 +8,10 @@
   Powered by <a href="https://github.com/karisnacell69" target="_blank">DarkUser Tech</a>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/karisnacell69/darkuser-premium-v2/main/darkuser-banner-marquee.svg" width="100%" alt="DarkUser Running Banner"/>
+</p>
+
 ---
 
 ## ⚡ Tentang DarkUser Premium v2
