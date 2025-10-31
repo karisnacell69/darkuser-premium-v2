@@ -1,0 +1,27 @@
+# DarkUser Premium v2 - Payload examples
+
+## SSH over WebSocket (path /ws)
+GET /ws HTTP/1.1
+Host: your.domain.tld
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
+Sec-WebSocket-Version: 13
+
+## SSH over WSS (TLS) - port 443
+GET /ws HTTP/1.1
+Host: your.domain.tld
+User-Agent: Mozilla/5.0
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
+Sec-WebSocket-Version: 13
+
+## Raw HTTP CONNECT (for some custom clients)
+CONNECT your.domain.tld:443 HTTP/1.1
+Host: your.domain.tld
+
+## UDP (BadVPN UDPGW)
+Server (on VPS): 127.0.0.1
+Ports: 7100, 7200, 7300
+Use client side: udp2raw + udpgw or a client that supports UDPGW.

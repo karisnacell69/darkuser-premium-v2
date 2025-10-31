@@ -1,0 +1,16 @@
+[Unit]
+Description=DarkUser Telegram SSH Panel (Premium)
+After=network.target
+
+[Service]
+Type=simple
+Environment="DARKUSER_BOT_TOKEN=REPLACE_WITH_YOUR_TOKEN"
+Environment="DARKUSER_ADMIN_ID=REPLACE_WITH_YOUR_ADMIN_ID"
+ExecStart=/usr/bin/python3 /usr/local/bin/telegram-ssh-panel.py
+Restart=on-failure
+User=root
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
