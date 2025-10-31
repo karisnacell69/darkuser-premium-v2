@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 120" width="100%" height="120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DarkUser Marquee Banner">
+  <defs>
+    <!-- Gradient untuk teks kuning neon -->
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15">
+        <animate attributeName="stop-color" values="#facc15;#fde047;#eab308;#facc15" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#fde047">
+        <animate attributeName="stop-color" values="#fde047;#facc15;#eab308;#fde047" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Efek glow berdenyut -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+      <animate attributeName="stdDeviation" values="2;4;2" dur="1.8s" repeatCount="indefinite"/>
+    </filter>
+
+    <!-- Background gradient ungu tua -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b0213" />
+      <stop offset="100%" stop-color="#14002b" />
+    </linearGradient>
+
+    <!-- Area potongan untuk marquee -->
+    <clipPath id="clip">
+      <rect x="90" y="18" width="1080" height="84" rx="6" ry="6"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- Logo lingkaran kiri -->
+  <g transform="translate(20,20)">
+    <circle cx="30" cy="30" r="28" fill="#1f0130" stroke="#facc15" stroke-width="2" filter="url(#glow)"/>
+    <text x="30" y="38" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="url(#g)" filter="url(#glow)">DU</text>
+  </g>
+
+  <!-- Kotak marquee -->
+  <rect x="90" y="18" width="1080" height="84" rx="6" ry="6" fill="rgba(255,255,255,0.02)" stroke="rgba(250,204,21,0.2)"/>
+
+  <!-- Teks berjalan -->
+  <g clip-path="url(#clip)">
+    <g id="marquee">
+      <text x="1200" y="73" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="url(#g)" filter="url(#glow)">
+        SELAMAT DATANG DI AUTO INSTALLR DARK USER - FREE INSTALLR ( dilarang copypaste script tanpa izin pembuat )
+      </text>
+      <text x="2700" y="73" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="url(#g)" filter="url(#glow)">
+        SELAMAT DATANG DI AUTO INSTALLR DARK USER - FREE INSTALLR ( dilarang copypaste script tanpa izin pembuat )
+      </text>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1800 0" dur="18s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="90" y="110" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#fef08a" opacity="0.6">
+    DarkUser Premium Suite v2 • https://github.com/karisnacell69
+  </text>
+</svg>
